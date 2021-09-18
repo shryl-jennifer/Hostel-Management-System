@@ -1,0 +1,234 @@
+{% extends "design.html" %}
+{% block body %}
+
+  <style>
+    #main{
+    float: left;
+    width: 60%;
+    padding-left: 300px;
+  }
+  .regform{
+    width: 800px;
+    height: 50px;
+    background-color: rgb(0,0,0,0.6);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 10px 0px 20px 0px;
+    text-align: center;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .main{
+    background-color: rgb(0,0,0,0.5);
+    width: 800px;
+    margin: auto;
+  }
+  form{
+    padding: 10px;
+  }
+  #name{
+    width: 100%;
+    height: 100px;
+  }
+  .name{
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 125px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .firstname{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+  }
+  .lastname{
+    position: relative;
+    left: 417px;
+    top: -80px;
+    line-height: 40px;
+    border-right: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+  .firstlabel{
+    position: relative;
+    color: #E5E5E5;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 203px;
+    top: -45px;
+  }
+  .lastlabel{
+    position: relative;
+    color: #E5E5E5;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 490px;
+    top: -80px;
+  }
+  .email{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 480px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+  .code{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 95px;
+    border-radius: 6px;
+    padding: 0 45px;
+    font-size: 16px;
+    color: #555;
+  }
+  .radio{
+    display:inline-block;
+    padding-right: 200px;
+    font-size: 25px;
+    margin-left: 25px;
+    margin-top: 15px;
+    color: white;
+  }
+  .radio input{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+  }
+  .pass{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 200px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+  button{
+    background-color: #3BAF9F;
+    display: block;
+    margin: 20px 0px 0px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border:2px solid #366473;
+    padding: 14px 110px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.25px;
+  }
+  button:hover{
+    background-color: #5390F5;
+  }
+  .main1{
+    float: center;
+    width: 100%;
+    color: black;
+    text-align: center;
+  }
+  .subs{
+    float: center;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 16px;
+  }
+  .main2{
+    float: center;
+    width: 100%;
+    color: black;
+    text-align: center;
+  }
+  .subs1{
+    float: center;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 16px;
+  }
+  .main3{
+    float: center;
+    width: 100%;
+    color: black;
+    text-align: center;
+  }
+  .subs2{
+    float: center;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 16px;
+  }
+  </style>
+  <br>
+  
+    <div class="regform"><h1>Room Information</h1></div>
+    <div class="main">
+   <form action="/addrooms" method="POST">
+   <div id="name">
+       <h2 class="name">Name</h2>
+       <input class="firstname" type="text" name="addrooms_firstname"><br>
+       <label class="firstlabel">First name</label>
+       <input class="lastname" type="text" name="addrooms_lastname"><br>
+       <label class="lastlabel">Last name</label>
+   </div>
+  
+   <h2 class="name">Email</h2>
+   <input class="email" type="text" name="addrooms_email">
+   
+   <h2 class="name">Room No</h2>
+   <input type="radio" name="addrooms_roomno" value="301">301<br>
+   <input type="radio" name="addrooms_roomno" value="302">302<br>
+   <input type="radio" name="addrooms_roomno" value="303">303 <br>
+   <input type="radio" name="addrooms_roomno" value="304">304<br>
+   <input type="radio" name="addrooms_roomno" value="305">305<br>
+   <input type="radio" name="addrooms_roomno" value="401">401<br>
+   <input type="radio" name="addrooms_roomno" value="402">402<br>
+   <input type="radio" name="addrooms_roomno" value="403">403<br>
+   <input type="radio" name="addrooms_roomno" value="404">404<br>
+   <input type="radio" name="addrooms_roomno" value="405">405<br>
+  
+   <h2 class="name" >Room Type</h2>
+   <input type="radio" name="addrooms_roomtype" value="two-sharing">Two-Sharing<br>
+   <input type="radio" name="addrooms_roomtype" value="three-sharing">Three-Sharing<br>
+   <input type="radio" name="addrooms_roomtype" value="four-sharing">Four-Sharing<br>
+  
+   <h2 class="name" >Food</h2>
+   <input type="radio" name="addrooms_food" value="Veg">Veg<br>
+   <input type="radio" name="addrooms_food" value="Non-Veg">Non-Veg<br>
+  
+   <h2 class="name" >Semester</h2>
+   <input class="email" type="text" name="addrooms_semester">
+
+   <h2 class="name" >Start-Date</h2>
+   <input class="email" type="text" name="addrooms_startdate">
+
+   <h2 class="name" >End-Date</h2>
+   <input class="email" type="text" name="addrooms_enddate">
+   
+   <button type="submit">Submit</button>
+   </form>
+   </div>
+  </div>
+  <br><br>
+
+  {% endblock %} 

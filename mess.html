@@ -1,0 +1,118 @@
+{% extends "design.html" %}
+{% block body %}
+
+<style>
+ table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 {
+  width: 100%;    
+  background-color: #f1f1c1;
+}
+  </style>
+
+  <br>
+  <h1>Welcome to the DSATM Hostel !!!</h1>
+  <br>
+
+  <p><h2>Hostel Rules</h2></p><br>
+  <ul>
+    <li>The Gates of the hostel will close at 9:00pm.</li>
+    <li>Anyone found after 9:00pm in the campus, strict action will be taken.</li>
+    <li>Permission should be taken from the warden, if any emergency after 9:00pm.</li>
+    <li>Laundry Details will be put up on the notice board.</li>
+    <li>The students should sign in the register daily at night.</li>
+    <li>The Mess card issued should be brought on every wednesday and sunday without fail.</li>
+  </ul>
+<br>
+
+<img src="{{ url_for('static', filename='images/bf.png') }}" width="200" height="200" alt="DSATM">
+  <img src="{{ url_for('static', filename='images/bf1.png') }}" width="200" height="200" alt="DSATM">
+
+  <img src="{{ url_for('static', filename='images/lunch.png') }}" width="200" height="200" alt="DSATM">
+  <img src="{{ url_for('static', filename='images/snacks.png') }}" width="200" height="200" alt="DSATM">
+
+  <img src="{{ url_for('static', filename='images/dinner.png') }}" width="200" height="200" alt="DSATM"><br><br>
+
+<table style="width:100%">
+  <tr>
+    <th>Day</th>
+    <th>Breakfast</th>
+    <th>Lunch</th>
+    <th>Snacks</th>
+    <th>Dinner</th>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>Idly & Vada</td>
+    <td>Rasam,fryms,rice,butter milk,Chapati and beetroot curry</td>
+    <td>Pav Bhaji</td>
+    <td>chapati,ridge gourd,rice,dal,juice</td>
+  </tr>
+
+  <tr>
+    <td>Tuesday</td>
+    <td>Dosa and chutney</td>
+    <td>chapati,bottlegourd,rice,dal,cake</td>
+    <td>Samosa</td>
+    <td>chapati,aalo curry,rice,dal,juice</td>
+  </tr>
+
+  <tr>
+    <td>Wednesday</td>
+    <td>Aalo paratha</td>
+    <td>chapati,aalo curry,rice,dal,egg burji</td>
+    <td>Potato chips</td>
+    <td>pulav,chicken biriyani,chatpata chicken</td>
+  </tr>
+
+  <tr>
+    <td>Thursday</td>
+    <td>Chole Bathure</td>
+    <td>chapati,kadai paneer,rice,dal makhani</td>
+    <td>Vada pav</td>
+    <td>chapati,masaledhar sprouts,rice,kung fu dal</td>
+  </tr>
+
+  <tr>
+    <td>Friday</td>
+    <td>Poha</td>
+    <td>Chapati, phineas curry,rice,dal and rasam</td>
+    <td>Gadak pe Laddu</td>
+    <td>chapati,ladhkana ferb,rice,kumbli maaro</td>
+  </tr>
+
+  <tr>
+    <td>Saturday</td>
+    <td>Upma and kesari baath</td>
+    <td>chapati,chakna choor,rice,pepper rasam,gulab jaamoon</td>
+    <td>Gobi Manchurian</td>
+    <td>chapati,pumpkin,rice,dal,badam milk</td>
+  </tr>
+
+  <tr>
+    <td>Sunday</td>
+    <td>Bread Omblete</td>
+    <td>chapati,chicken curry,rice,dal,curd</td>
+    <td>juice and Bhaji</td>
+    <td>chapati,chilli chicken,chilli paneer,biriyani,pulav,kova</td>
+  </tr>
+</table>
+<br><br>
+
+<p><h4>Note:- Tea and Coffee will be provided daily at breakfast and snacks.</h4></p>
+<p><h4>Note:- This Menu is not permanent, keeps changing from time to time.</h4></p>
+<br>
+
+<p><h6>Mrs.Vandhita Shah<br>
+  Hostel Manager - DSATM,<br>
+  E mail: hostel123@dsatm.edu.in<br>
+  Ph: 080-12345678,99654567<br>
+  Mobile No: +91 9965443456.</h6</p><br><br>
+
+  {% endblock %} 

@@ -1,0 +1,48 @@
+{% extends "design.html" %}
+{% block body %}
+
+<style>
+  table, th, td,thead,tr,tbody {
+   border: 1px solid black;
+   border-collapse: collapse;
+ }
+ th, td {
+   padding: 5px;
+   text-align: left;
+ }
+ #t01 {
+   width: 100%;    
+   background-color: #f1f1c1;
+ }
+   </style>
+
+
+<div class="container">
+  <h1>Contact Complaints</h1><br>         
+  <table class="table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Gender</th>
+        <th>Complaint</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for data in ContactDetails %}
+      <tr>
+        <td>{{data.contact_firstname}}</td>
+        <td>{{data.contact_lastname}}</td>
+        <td>{{data.contact_email}}</td>
+        <td>{{data.contact_phone}}</td>
+        <td>{{data.contact_gender}}</td>
+        <td>{{data.contact_complaint}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+  {% endblock %} 

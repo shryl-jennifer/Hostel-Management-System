@@ -1,0 +1,240 @@
+{% extends "design.html" %}
+{% block body %}
+
+<style>
+  #main{
+	float: left;
+	width: 60%;
+	padding-left: 300px;
+}
+.regform{
+	width: 800px;
+	height: 50px;
+	background-color: rgb(0,0,0,0.6);
+	margin: auto;
+	color: #FFFFFF;
+	padding: 10px 0px 20px 0px;
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+}
+.main{
+	background-color: rgb(0,0,0,0.5);
+	width: 800px;
+	margin: auto;
+}
+form{
+	padding: 10px;
+}
+#name{
+	width: 100%;
+	height: 100px;
+}
+.name{
+	margin-left: 50px;
+	margin-top: 30px;
+	width: 125px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}
+.firstname{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+}
+.lastname{
+	position: relative;
+	left: 417px;
+	top: -80px;
+	line-height: 40px;
+	border-right: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+.firstlabel{
+	position: relative;
+	color: #E5E5E5;
+	text-transform: capitalize;
+	font-size: 14px;
+	left: 203px;
+	top: -45px;
+}
+.lastlabel{
+	position: relative;
+	color: #E5E5E5;
+	text-transform: capitalize;
+	font-size: 14px;
+	left: 490px;
+	top: -80px;
+}
+.email{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+.code{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 95px;
+	border-radius: 6px;
+	padding: 0 45px;
+	font-size: 16px;
+	color: #555;
+}
+.radio{
+	display:inline-block;
+	padding-right: 200px;
+	font-size: 25px;
+	margin-left: 25px;
+	margin-top: 15px;
+	color: white;
+}
+.radio input{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	outline: none;
+}
+.pass{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 200px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+button{
+	background-color: #3BAF9F;
+	display: block;
+	margin: 20px 0px 0px 20px;
+	text-align: center;
+	border-radius: 12px;
+	border:2px solid #366473;
+	padding: 14px 110px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	transition: 0.25px;
+}
+button:hover{
+	background-color: #5390F5;
+}
+.main1{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+}
+.subs{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+	font-family: "Helvetica";
+	font-size: 16px;
+}
+.main2{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+}
+.subs1{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+	font-family: "Helvetica";
+	font-size: 16px;
+}
+.main3{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+}
+.subs2{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+	font-family: "Helvetica";
+	font-size: 16px;
+}
+</style>
+<br>
+<br>
+  <div class="regform"><h1>Personal Information</h1></div>
+  <div class="main">
+ <form action="/personal" method="POST">
+ <div id="name">
+     <h2 class="name">Name</h2>
+     <input class="firstname" type="text" name="personal_firstname"><br>
+     <label class="firstlabel">First name</label>
+     <input class="lastname" type="text" name="personal_lastname"><br>
+     <label class="lastlabel">Last name</label>
+ </div>
+
+ <h2 class="name">Email</h2>
+ <input class="email" type="text" name="personal_email">
+
+ <h2 class="name">Age</h2>
+ <input class="email" type="text" name="personal_age">
+
+ <h2 class="name" >Phone</h2>
+ <input class="email" type="text" name="personal_phone">
+ 
+ <h2 class="name">Gender</h2>
+ <input type="radio" name="personal_gender" value="female">Female<br>
+ <input type="radio" name="personal_gender" value="male">Male<br>
+ <input type="radio" name="personal_gender" value="notpreferredtosay">Preferred not to say <br>
+
+ <h2 class="name" >Alternate Phone</h2>
+ <input class="email" type="text" name="personal_alternatephone">
+
+ <h2 class="name" >Nationality</h2>
+ <input class="email" type="text" name="personal_nationality">
+
+ <h2 class="name" >City</h2>
+ <input class="email" type="text" name="personal_city">
+
+ <h2 class="name" >Native</h2>
+ <input class="email" type="text" name="personal_native">
+
+ <h2 class="name" >Semester</h2>
+ <input class="email" type="text" name="personal_semester">
+
+ <h2 class="name" >Degree</h2>
+ <input type="radio" name="personal_degree" value="be">BE<br>
+ <input type="radio" name="personal_degree" value="bba">BBA<br>
+ <input type="radio" name="personal_degree" value="mba">MBA<br>
+ <input type="radio" name="personal_degree" value="architecture">Architecture<br>
+ <input type="radio" name="personal_degree" value="mca">MCA<br>
+ <input type="radio" name="personal_degree" value="BSE">BSE<br>
+ <input type="radio" name="personal_degree" value="ba">BA<br>
+ <input type="radio" name="personal_degree" value="bcom">B.COM<br>
+ 
+ <button type="submit">Submit</button>
+ </form>
+ </div>
+</div>
+<br><br>
+
+  {% endblock %} 

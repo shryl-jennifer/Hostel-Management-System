@@ -1,0 +1,55 @@
+{% extends "design.html" %}
+{% block body %}
+
+<style>
+  table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+ }
+ th, td {
+   padding: 5px;
+   text-align: left;
+ }
+ #t01 {
+   width: 100%;    
+   background-color: #f1f1c1;
+ }
+   </style>
+
+<div class="container">
+  <h1>ROOMS</h1><br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Room No</th>
+        <th>Room Type</th>
+        <th>Food</th>
+        <th>Semester</th>
+        <th>Start-Date</th>
+        <th>End-Date</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for data in DisplayRooms %}
+      <tr>
+        <td>{{data.addrooms_id}}</td>
+        <td>{{data.addrooms_firstname}}</td>
+        <td>{{data.addrooms_lastname}}</td>
+        <td>{{data.addrooms_email}}</td>
+        <td>{{data.addrooms_roomno}}</td>
+        <td>{{data.addrooms_roomtype}}</td>
+        <td>{{data.addrooms_food}}</td>
+        <td>{{data.addrooms_semester}}</td>
+        <td>{{data.addrooms_startdate}}</td>
+        <td>{{data.addrooms_enddate}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+  {% endblock %} 

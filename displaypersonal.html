@@ -1,0 +1,61 @@
+{% extends "design.html" %}
+{% block body %}
+
+<style>
+  table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+ }
+ th, td {
+   padding: 5px;
+   text-align: left;
+ }
+ #t01 {
+   width: 100%;    
+   background-color: #f1f1c1;
+ }
+   </style>
+
+<div class="container">
+  <h1>PERSONAL INFORMATION</h1><br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Phone</th>
+        <th>Gender</th>
+        <th>Alternate Phone</th>
+        <th>Nationality</th>
+        <th>City</th>
+        <th>Native</th>
+        <th>Semester</th>
+        <th>Degree</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for data in DisplayPersonal %}
+      <tr>
+        <td>{{data.personal_id}}</a></td>
+        <td>{{data.personal_firstname}}</td>
+        <td>{{data.personal_lastname}}</td>
+        <td>{{data.personal_email}}</td>
+        <td>{{data.personal_age}}</td>
+        <td>{{data.personal_phone}}</td>
+        <td>{{data.personal_gender}}</td>
+        <td>{{data.personal_alternatephone}}</td>
+        <td>{{data.personal_nationality}}</td>
+        <td>{{data.personal_city}}</td>
+        <td>{{data.personal_native}}</td>
+        <td>{{data.personal_semester}}</td>
+        <td>{{data.personal_degree}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+  {% endblock %} 
